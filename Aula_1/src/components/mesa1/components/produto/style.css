@@ -28,15 +28,14 @@
     
 }
 
-.container-title-description{
+.container-title{
     font-size: 14px;
     font-family: "Ubuntu";
-    font-style: Medium;
+    font-weight: 500;
     line-height: 16px;
-    line-height: 100%;
     align: left;
-    padding-right:24px;
-    
+    color: #2e2e2e;
+    vertical-align:top;
 
 }
 
@@ -49,7 +48,7 @@
     line-height: 100%;
     align: left;
     margin-bottom: 1px;
-
+    vertical-align:top;
 }
 
 .container-price{
@@ -60,5 +59,5 @@
     line-height: 28px;
     line-height: 100%;
     align: left;
-    
+    vertical-align:top;
 }
