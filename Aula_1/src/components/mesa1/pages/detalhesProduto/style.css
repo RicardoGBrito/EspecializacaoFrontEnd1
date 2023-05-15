@@ -1,4 +1,25 @@
-.container-main{
+.detalhe-container-main{
+    width: 100%;
     display:flex;
+    flex-direction: column;
+    gap:30px;
+    width:1920px;
+    align-items: center;
+
+}
+
+
+.detalhe-container-text{
+    font-family:"Ubuntu";
+    font-size:32px;
+    font-weight:400;
+    color:#2e2e2e;
+    line-height:37px;
+    margin: 54px 0px 30px 0px;
     
+}
+.detalhe-container-cards{
+    display:flex;
+    gap: 45px;
+    margin: 0px auto 0px auto;
 }

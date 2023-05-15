@@ -1,0 +1,84 @@
+.login-container{
+    background-color: #512da8;
+    display:flex;
+    flex-direction:column;
+    gap:198px;
+    align-items:center;
+}
+
+.login-container-title{
+    font-family:"Ubuntu";
+    font-size: 40px;
+    font-weight: 400;
+    color: #ffffff;
+    height: 46px;
+    margin-top: 52px;
+    line-heigth:46px;
+}
+
+.login-container-content{
+    display: flex;
+    flex-direction:column;
+    background-color: #ffffff;
+    width: 393px;
+    height:407px;
+    border-radius: 20px;
+    align-items:center;
+    gap:25px;
+    padding: 28px 30px 53px 30px;
+
+}
+
+.login-container-content-title{
+    font-family:"Ubuntu";
+    font-size:40px;
+    font-weight:400;
+    color:#000000;
+    
+}
+
+.login-container-content-text{
+    font-family:"Ubuntu";
+    font-size:24px;
+    font-weight:400;
+    color:#000000;
+    text-align:center;
+    line-height:28px;
+
+}
+
+
+input{
+    width:362px;
+    height:25px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    font-size: 22px;
+    line-height: 25px;
+    font-weight:300;
+    color:#7a7a7a;
+    padding: 15px 0px 15px 29px;
+    
+}
+
+.btn-login{
+    width:393px;
+    height:55px;
+    background-color:#f3bd30;
+    border: 1px solid #f3bd30;
+    border-radius:20px;
+    font-family: "Ubuntu";
+    font-weight:400;
+    font-size:24px;
+    margin-top:28px;
+    
+}
+
+.login-container-text{
+    font-family: "Ubuntu";
+    font-size:20px;
+    font-weight:400;
+    color:#ffffff;
+    line-height:23px;
+    margin: 27px 0px 48px 0px;
+}

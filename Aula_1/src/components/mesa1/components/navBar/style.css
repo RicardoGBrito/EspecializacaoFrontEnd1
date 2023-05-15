@@ -1,0 +1,44 @@
+.container-main-header{
+    width:1920px;
+    height: 98px;
+    background-color: #512da8;
+    border-top: 1px solid #ffffff;
+    
+  }
+  
+  .container-main-title{
+    width: 263px;
+    font-family:'Ubuntu';
+    color: #ffffff;
+    height: 46px;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 46px;
+    margin: 25px auto 27px auto;
+  }
+
+  .container-main-user{
+    display:flex;
+    gap:58px;
+  }
+
+  .container-main-user-mail{
+    font-family:'Ubuntu';
+    color: #000000;
+    font-size:28px;
+    font-weight: 400;
+    font-height:32px;
+  }
+
+  .container-main-user-logout{
+    background-color: #f3bd30;
+    border-radius:20px;
+    width:97px;
+    height:43px;
+    font-family:'Ubuntu';
+    color: #ffffff;
+    font-size:20px;
+    font-weight: 700;
+    font-height:23px;
+
+  }
