@@ -14,6 +14,9 @@ const MyProvider = ({children}) => {
             setUserMail(response)
 
         }
+        else{
+            navigate("/login")
+        }
     },[])
     
     function logout(){

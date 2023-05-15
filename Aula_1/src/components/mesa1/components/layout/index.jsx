@@ -5,13 +5,14 @@ import { MyContext } from "../../context"
 
 export default function Layout(){
 
-    const navigate = useNavigate()
-    const {userMail} = useContext(MyContext)
-    if(userMail){
+    /* const navigate = useNavigate()
+    const mail = localStorage.getItem("email")
+
+    if(mail){
         navigate("/")
     }else{
         navigate("/login")
-    }
+    } */
 
     return(
         <div>
