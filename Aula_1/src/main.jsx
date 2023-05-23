@@ -1,10 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
+import {QueryClientProvider, QueryClient} from '@tanstack/react-query'
 
+//Instanciando um objeto da classe QueryClient
+const client = new QueryClient()
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  
-  <App />
+  //O provider precisa do atributo client para poder iniciar.
+  <QueryClientProvider client={client}>
+    <App />
+
+  </QueryClientProvider>
   
 )
