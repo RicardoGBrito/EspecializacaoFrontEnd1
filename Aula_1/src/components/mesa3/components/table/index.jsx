@@ -10,7 +10,7 @@ export default function Table(props){
     const {formData, setFormData, clearForm} = props
 
     const [ count, setCount] = useState(0)
-    const { dadosAluno } = useQuery(["@alunos"], getAluno,{
+    const { data } = useQuery(["@alunos"], getAluno,{
         refetchOnWindowFocus: false,
 
     })
@@ -20,11 +20,16 @@ export default function Table(props){
     
     })
 
-    console.log(dadosAluno)
+    console.log(data)
 
     function editar(item){
+        alert(JSON.stringify(item))
         setFormData({ ...item, id:item._id})
     }
+
+    /* function contador(){
+        
+    } */
 
     function deletar(id){
         mutation(id)
@@ -52,15 +57,16 @@ export default function Table(props){
                 </thead>
                 <tbody>
                     {
-                        dadosAluno?.map((item, idx)=>(
-                            <tr key={idx} count={setCount(idx)}>
+                        
+                        data?.map((item, idx)=>(
+                            <tr key={idx} >
                                 <td>{idx}</td>
                                 <td>{item.nome}</td>
                                 <td>{item.matricula}</td>
                                 <td>{item.curso}</td>
                                 <td>{item.bimestre}</td>
                                 <td>
-                                    <EditIcon style={color='red'} onClick={()=>editar(item)}/>
+                                    <EditIcon  onClick={()=>editar(item)}/>
                                     <DeleteForeverIcon onClick={()=>deletar(item._id)}/>
 
                                 </td>
