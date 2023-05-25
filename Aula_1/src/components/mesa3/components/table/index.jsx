@@ -15,7 +15,7 @@ export default function Table(props){
 
     })
 
-    const {mutation} = useMutation(deleteAluno,{
+    const {mutate} = useMutation(deleteAluno,{
         onSuccess:()=>{queryClient.invalidateQueries(["@alunos"])}
     
     })
@@ -32,7 +32,7 @@ export default function Table(props){
     } */
 
     function deletar(id){
-        mutation(id)
+        mutate(id)
         clearForm()
     }
 
@@ -67,7 +67,7 @@ export default function Table(props){
                                 <td>{item.bimestre}</td>
                                 <td>
                                     <EditIcon  onClick={()=>editar(item)}/>
-                                    <DeleteForeverIcon onClick={()=>deletar(item._id)}/>
+                                    <DeleteForeverIcon className="bg" onClick={()=>deletar(item._id)}/>
 
                                 </td>
                             </tr>

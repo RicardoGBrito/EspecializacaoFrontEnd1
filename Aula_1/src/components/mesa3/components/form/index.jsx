@@ -11,12 +11,12 @@ export default function Form(props){
 
     const {data} = useQuery(["@cursos"], getCursos)
 
-    const {mutation} = useMutation(saveAluno,{
+    const {mutate} = useMutation(saveAluno,{
         onSuccess:()=>{queryClient.invalidateQueries(["@alunos"])}
     
     })
 
-    const {mutation: editMutation} = useMutation(editAluno,{
+    const {mutate: editMutate} = useMutation(editAluno,{
         onSuccess:()=>{queryClient.invalidateQueries(["@alunos"])}
     
     })
@@ -24,12 +24,23 @@ export default function Form(props){
     console.log(data)
 
     function editar(){
-        editMutation(formData)
+        editMutate({
+            id: formData.id,
+            nome: formData.nome,
+            matricula: formData.matricula,
+            curso: formData.curso,
+            bimestre: formData.bimestre,
+          })
         clearForm()
     }
 
     function salvar(){
-        mutation(formData)
+        mutate({
+            nome: formData.nome,
+            matricula: formData.matricula,
+            curso: formData.curso,
+            bimestre: formData.bimestre,
+          })
         clearForm()
 
     }
@@ -48,7 +59,7 @@ export default function Form(props){
             value={formData.matricula}
             placeholder="Matrícula" 
             onChange={(event=>setFormData({... formData, matricula:event.target.value}))}/>
-            <select onChange={(event=>setFormData({... formData, curso:event.target.value}))}>
+            <select value={formData.curso} onChange={(event=>setFormData({... formData, curso:event.target.value}))}>
                 <option hidden>Selecione uma opção</option>
                 {data?.cursos.map((curso)=>(
                     <option key={curso.id}>{curso.name}</option>

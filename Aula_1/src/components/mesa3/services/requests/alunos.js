@@ -28,8 +28,8 @@ export const saveAluno = async (body) =>{
         body: JSON.stringify(body)
     }
 
-    fetch('https://api-aluno.vercel.app/aluno',options).then(response => response.json())
-
+    const response = fetch('https://api-aluno.vercel.app/aluno',options).then(response => response.json())
+    console.log(response)
 }
 
 export const deleteAluno = async (id) =>{
