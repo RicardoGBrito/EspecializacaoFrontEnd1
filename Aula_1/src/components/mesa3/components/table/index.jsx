@@ -27,9 +27,13 @@ export default function Table(props){
         setFormData({ ...item, id:item._id})
     }
 
-    /* function contador(){
+    function contador(idx){
         
-    } */
+        setCount(idx+1)
+        
+    }
+
+    
 
     function deletar(id){
         mutate(id)
@@ -39,7 +43,7 @@ export default function Table(props){
     return(
         <>
             <div>
-                <h1>Alunos Cadastrados</h1>
+                <h1 >Alunos Cadastrados</h1>
                 <h1>Total de alunos: {count}</h1>
 
             </div>
@@ -59,8 +63,9 @@ export default function Table(props){
                     {
                         
                         data?.map((item, idx)=>(
+                            
                             <tr key={idx} >
-                                <td>{idx}</td>
+                                <td>{idx+1}</td>
                                 <td>{item.nome}</td>
                                 <td>{item.matricula}</td>
                                 <td>{item.curso}</td>
