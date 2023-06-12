@@ -12,6 +12,7 @@ mongoose.connect("mongodb+srv://ricardo:cocada4321@cluster0.crnldw7.mongodb.net/
 
 
 const express = require('express');
+const cors = require('CORS');
 
 const ProdutoSchema = require("./schemas/produtoSchema")
 
@@ -55,6 +56,7 @@ const produtos = [
 ]
 /* O app.use é necessário para poder capturar o body do post */
 app.use(express.json())
+app.use(cors({origin: 'http://127.0.0.1:5173'}))
 
 app.get("/", (request, response) =>{
     return response.json({ Ping:"Pong"})
